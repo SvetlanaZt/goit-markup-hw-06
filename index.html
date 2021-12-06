@@ -396,22 +396,35 @@
                 </div>
 
                 <div class="name-modal">
-                    <label class="name-name" for="name"> Телефон</label>
-                    <input class="modal-input" type="name" name="user-name" id="name" />
+                    <label class="name-name" for="tell"> Телефон</label>
+                    <input class="modal-input" type="tell" name="user-tell" id="tell" />
                     <svg class="modal-svg" width="13" height="13">
                         <use href="./images/sprite.svg#icon-tell-modal"></use>
                     </svg>
                 </div>
 
                 <div class="name-modal">
-                    <label class="name-name" for="name"> Почта</label>
-                    <input class="modal-input" type="name" name="user-name" id="name" />
+                    <label class="name-name" for="e-mail"> Почта</label>
+                    <input class="modal-input" type="e-mail" name="user-mail" id="e-mail" />
                     <svg class="modal-svg" width="15" height="12">
                         <use href="./images/sprite.svg#icon-mail-modal"></use>
                     </svg>
                 </div>
+                <div class="name-modal">
+                <label class="name-name" for="comm"> Комментарии</label>
+                <textarea name="comm" class="modal-input comments" id="comm" placeholder="Введите текст"></textarea>
+                </div>
 
-            
+                <input type="checkbox"
+                name="policy"
+                id="modal-check"
+                class="modal-check"
+                />
+                <label for="modal-check" class="modal-check-text">Соглашаюсь с рассылкой и принимаю
+                    <a class="modal-link" href=""> Условия договора</a>
+                </label>
+
+                <button type="submit" class="button-send">Отправить</button>
             </form>
         </div>
     </div>

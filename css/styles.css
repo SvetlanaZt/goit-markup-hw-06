@@ -287,7 +287,7 @@ h5 {
 
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1;
   text-align: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -468,13 +468,13 @@ h5 {
   color: var(--second-text-color);
   font-weight: bold;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.2;
   letter-spacing: 0.03em;
 }
 .footer-adress {
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: var(--second-text-color);
   text-decoration: none;
@@ -482,7 +482,7 @@ h5 {
 .footer-nav {
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.7;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
@@ -493,7 +493,7 @@ h5 {
 .join-title {
   font-weight: bold;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.1;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-text-color);
@@ -595,12 +595,14 @@ h5 {
   position: relative;
   margin-left: 40px;
   margin-right: 40px;
+  margin-bottom: 10px;
 }
 .modal-svg {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 10px;
   transform: translate(50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .name-name {
   font-size: 12px;
@@ -614,5 +616,93 @@ h5 {
   width: 100%;
   min-height: 40px;
   justify-content: center;
+  padding-left: 42px;
+  padding-right: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.comments {
+  min-height: 120px;
+  resize: none;
+  padding: 12px 16px;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-comm {
+  display: flex;
+  width: 100%;
+  min-height: 120px;
+  justify-content: center;
   margin-bottom: 10px;
+  padding: 12px 16px;
+}
+.button-send {
+  display: block;
+  cursor: pointer;
+  background: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  padding: 10px 55px;
+
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.modal-input:focus + .modal-svg {
+  fill: #188ce8;
+}
+.modal-input:focus {
+  border-color: #188ce8;
+}
+
+.modal-check-text::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: 2px solid #212121;
+  display: block;
+  margin-right: 5px;
+}
+.modal-check:checked + .modal-check-text::before {
+  background-image: url(../images/check.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+}
+.modal-check-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+.modal-link {
+  color: var(--accent-color);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
 }
